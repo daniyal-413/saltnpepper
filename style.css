@@ -13,6 +13,7 @@ body {
     height: 100%;
 }
 
+
 .navBar {
     width: 100%;
     height: 90px;
@@ -25,22 +26,59 @@ body {
 
 .navChild {
     display: flex;
-    /* background-color: red; */
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.navChild>a {
+.navChild-2 > a {
     color: whitesmoke;
     text-decoration: none;
     margin: 0 20px;
 }
 
-.navChild>button {
+.navChild-2 > button {
     margin: 5px;
 }
 
+.hamburger {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 840px) {
+    .navChild-2 {
+        flex-direction: column;
+        background: black;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 100%;
+        padding: 15px;
+        text-align: center;        
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .navChild-2 a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navChild-2.show {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
 /* button section */
 
 .btn {
@@ -65,18 +103,8 @@ body {
 
 /* button section */
 
-/* @media screen and (min-width: 1344px){
-  .order-1 {
-    display: flex;
-    order: 2;
-  }
-  .order-2 {
-    display: flex;
-    order: 1;
-  }
-} */
+
 /* section-1 */
-.section-1 {}
 
 .section-1>img {
     width: 100%;
@@ -300,11 +328,7 @@ body {
     /* background-color: green; */
 }
 
-/*  */
-.sec-4-card-content {
-    /* background-color: green; */
 
-}
 
 
 .sec-4-card-img>img {
@@ -463,6 +487,7 @@ body {
     margin-bottom: 15px;
     transition: 200ms ease-in-out;
 }
+
 .ft-child-2>a:hover {
     color: #a3a3a3;
 }

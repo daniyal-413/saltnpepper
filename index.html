@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,13 +16,15 @@
 
 <body>
 
-
     <header>
         <nav class="navBar">
             <div class="navChild">
                 <img width="170px" src="images/logo.webp" alt="">
             </div>
-            <div class="navChild">
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="navChild-2">
                 <a href="">Home</a>
                 <a href="">About Us</a>
                 <a href="">Publications</a>
@@ -358,6 +361,14 @@
             </div>
         </div>
     </footer>
+
+
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".navChild-2").classList.toggle("show");
+        }
+    </script>
 </body>
 
 </html>
