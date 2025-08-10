@@ -11,6 +11,7 @@ html,
 body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -31,13 +32,13 @@ body {
     flex-wrap: wrap;
 }
 
-.navChild-2 > a {
+.navChild-2>a {
     color: whitesmoke;
     text-decoration: none;
     margin: 0 20px;
 }
 
-.navChild-2 > button {
+.navChild-2>button {
     margin: 5px;
 }
 
@@ -57,7 +58,7 @@ body {
         right: 0;
         width: 100%;
         padding: 15px;
-        text-align: center;        
+        text-align: center;
         transform: translateY(-20px);
         opacity: 0;
         pointer-events: none;
@@ -79,6 +80,7 @@ body {
         display: block;
     }
 }
+
 /* button section */
 
 .btn {
@@ -102,17 +104,30 @@ body {
 }
 
 /* button section */
-
-
-/* section-1 */
+.section-1 {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
 
 .section-1>img {
-    width: 100%;
-    /* height: 100vh; */
+    width: 100vw;
+    height: auto;
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 
 /* section-1 */
 
